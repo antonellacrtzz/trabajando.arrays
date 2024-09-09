@@ -38,5 +38,16 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
+  
+  const strangeArray2 = strangeArray.filter(element => typeof element === 'string'); 
+  // filter es un método de array que crea un nuevo array con todos los elementos que cumplen con una condición específica.
+  // typeof element === 'string' verifica si el tipo del elemento es una cadena de texto (string). Solo los elementos que pasan esta condición se incluyen en el nuevo array stringsOnly.
+  
+  strangeArray2.sort();
+  // sort es un método de array que ordena los elementos del array en su lugar y devuelve el array ordenado. Por defecto ordena a los string en orden alfabético.
+  
+  showList(strangeArray2);
+  // La función showList toma un array y lo muestra en un elemento HTML con el id list. Crea un nuevo elemento <li> para cada elemento del array y lo agrega a la lista.
+  
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
 });
